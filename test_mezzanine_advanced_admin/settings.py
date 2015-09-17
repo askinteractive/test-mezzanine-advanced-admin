@@ -110,6 +110,7 @@ LANGUAGE_CODE = "fr"
 
 # Supported languages
 LANGUAGES = (
+    ('fr', _('Francais')),
     ('en', _('English')),
 )
 
@@ -288,7 +289,7 @@ OPTIONAL_APPS = (
     # PACKAGE_NAME_GRAPPELLI,
 )
 
-ADVANCED_ADMIN_TITLE = "Test"
+ADVANCED_ADMIN_TITLE = "Administration"
 ADVANCED_ADMIN_LOGO_PATH = "images/logo.png"
 
 ##################
