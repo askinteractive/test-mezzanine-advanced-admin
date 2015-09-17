@@ -106,7 +106,7 @@ USE_TZ = True
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = "en"
+LANGUAGE_CODE = "fr"
 
 # Supported languages
 LANGUAGES = (
@@ -125,7 +125,7 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = False
+USE_I18N = True
 
 AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
 
@@ -287,6 +287,9 @@ OPTIONAL_APPS = (
     # PACKAGE_NAME_FILEBROWSER,
     # PACKAGE_NAME_GRAPPELLI,
 )
+
+ADVANCED_ADMIN_TITLE = "Test"
+ADVANCED_ADMIN_LOGO_PATH = "images/logo.png"
 
 ##################
 # LOCAL SETTINGS #
