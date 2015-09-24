@@ -205,6 +205,7 @@ TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
 ################
 
 INSTALLED_APPS = (
+    "mezzanine_advanced_admin",
     "filebrowser",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -214,7 +215,6 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
-    "mezzanine_advanced_admin",
     "mezzanine.boot",
     "mezzanine.conf",
     "mezzanine.core",
@@ -224,8 +224,9 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
-    # "mezzanine.accounts",
-    # "mezzanine.mobile",
+    "mezzanine.accounts",
+    "mezzanine.mobile",
+    "mezzanine_extra",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -288,6 +289,16 @@ OPTIONAL_APPS = (
     # PACKAGE_NAME_FILEBROWSER,
     # PACKAGE_NAME_GRAPPELLI,
 )
+FILEBROWSER_SELECT_FORMATS = {
+    'File': ['Folder', 'Document'],
+    'Image': ['Image'],
+    'Media': ['Video', 'Audio'],
+    'Document': ['Document'],
+    # for TinyMCE we can also define lower-case items
+    'image': ['Image'],
+    'file': ['Folder', 'Image', 'Document'],
+    'media': ['Video', 'Audio'],
+}
 
 ADVANCED_ADMIN_TITLE = "Administration"
 ADVANCED_ADMIN_LOGO_PATH = "images/logo.png"
