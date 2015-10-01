@@ -26,6 +26,9 @@ if settings.USE_MODELTRANSLATION:
     )
 
 urlpatterns += patterns('',
+
+    ("^admin/advanced/", include("mezzanine_advanced_admin.urls")),
+
     # We don't want to presume how your homepage works, so here are a
     # few patterns you can use to set it up.
 
