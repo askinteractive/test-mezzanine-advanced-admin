@@ -8,7 +8,7 @@ import mezzanine.core.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('pages', '0005_auto_20150923_1137'),
+        ('pages', '0003_auto_20150527_1555'),
     ]
 
     operations = [
@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('content', mezzanine.core.fields.RichTextField(verbose_name='Content')),
                 ('_order', mezzanine.core.fields.OrderField(null=True, verbose_name='Order')),
-                ('title', models.CharField(default=b'', max_length=200)),
+                ('title', models.CharField(default=b'', max_length=200, verbose_name=b'Titre')),
                 ('image', mezzanine.core.fields.FileField(max_length=255, null=True, verbose_name=b'Image', blank=True)),
                 ('short_content', mezzanine.core.fields.RichTextField(verbose_name='Description courte', blank=True)),
                 ('css_class', models.CharField(default=b'', max_length=200, blank=True)),
@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
             ],
             options={
                 'ordering': ('_order',),
-                'verbose_name': 'static block',
-                'verbose_name_plural': 'static blocks',
+                'verbose_name': 'Bloc statique',
+                'verbose_name_plural': 'Blocs statiques',
             },
         ),
         migrations.CreateModel(

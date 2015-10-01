@@ -35,3 +35,9 @@ class PageBlock(Orderable, RichText):
 
     def __unicode__(self):
         return self.title
+
+
+class Person(Orderable):
+    first_name = models.CharField("First name", max_length=100)
+    last_name = models.CharField("Last name", max_length=100)
+    updated = models.DateTimeField("Updated at", auto_now=True)
